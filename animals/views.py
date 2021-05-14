@@ -7,14 +7,14 @@ from django.db.models import Q
 # Create your views here.
 def home(request):
     animals = Animal.objects.all()
-    cats = Animal.objects.filter(animal='Cat')
+    cats = Animal.objects.filter(animal='Cat').order_by('id')
     no_of_cats = len(cats)
 
     paginator1 = Paginator(cats, 10)
     page = request.GET.get('catpage')
     cats = paginator1.get_page(page)
 
-    dogs = Animal.objects.filter(animal='Dog')
+    dogs = Animal.objects.filter(animal='Dog').order_by('id')
     no_of_dogs = len(dogs)
     
     paginator2 = Paginator(dogs, 10)
@@ -24,7 +24,7 @@ def home(request):
     no_of_animals = len(Animal.objects.all())
     return render(request, 'home.html', {'animals': animals,
                                          'cats': cats,
-                                         'dogs':dogs,
+                                         'dogs': dogs,
                                          'no_of_animals': no_of_animals,
                                          'no_of_cats': no_of_cats,
                                          'no_of_dogs': no_of_dogs})
