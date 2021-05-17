@@ -2,14 +2,14 @@
 {% block content %}
 <div class="container">
     <div class="row custom">
-        <div class="col-md-6 mt-3">
+        <div class="col-md-5 mt-3">
             <img 
             src="{{ animal.photo }}" 
             class="mx-auto d-block" 
-            style="height: 25rem; width: 25rem; object-fit: cover;" 
+            style="height: 25rem; width: 23rem; object-fit: cover;" 
             alt="{{ animal.photo.url }}" />
         </div>
-        <div class="col-md-6 mt-4">
+        <div class="col-md-6 mt-4 detail">
             <h5 class="mt-6 display-4 text-success">{{ animal.name }}
             {% if animal.gender == 'Male' %}
             <i class="fas fa-mars" style="color:blue;"></i>
