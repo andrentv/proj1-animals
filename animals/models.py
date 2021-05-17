@@ -19,7 +19,8 @@ GENDER_CHOICES = (
 
 class Animal(models.Model):
     name = models.CharField(max_length=32)
-    image = models.ImageField(upload_to='media/')
+    #image = models.ImageField(upload_to='media/')
+    photo = models.URLField()
     description = models.TextField(max_length=360)
     difficulty = models.IntegerField(
         validators=[MinValueValidator(1), MaxValueValidator(5)]

@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=32)),
-                ('image', models.ImageField(upload_to='media/')),
+                #('image', models.ImageField(upload_to='media/')),
                 ('description', models.TextField(max_length=360)),
                 ('difficulty', models.IntegerField(validators=[django.core.validators.MinValueValidator(1), django.core.validators.MaxValueValidator(5)])),
                 ('animal', models.CharField(choices=[('Cat', 'CAT'), ('Dog', 'DOG')], max_length=3)),

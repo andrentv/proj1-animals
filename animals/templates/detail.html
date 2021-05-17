@@ -4,10 +4,10 @@
     <div class="row custom">
         <div class="col-md-6 mt-3">
             <img 
-            src="{{ animal.image.url }}" 
+            src="{{ animal.photo }}" 
             class="mx-auto d-block" 
             style="height: 25rem; width: 25rem; object-fit: cover;" 
-            alt="{{ animal.image.url }}" />
+            alt="{{ animal.photo.url }}" />
         </div>
         <div class="col-md-6 mt-4">
             <h5 class="mt-6 display-4 text-success">{{ animal.name }}
@@ -54,9 +54,9 @@
                         <div class="swiper-slide">
                             <a href="../{{ animal.id }}">
                             <div class="card">
-                                <img src="{{ animal.image.url}}" 
+                                <img src="{{ animal.photo }}" 
                                 class="card-img-top"
-                                alt="{{ animal.image.url}}"
+                                alt="{{ animal.photo.url}}"
                                 style="height: 8rem; object-fit: cover;" 
                                 />
                             </div>
