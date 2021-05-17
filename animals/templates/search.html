@@ -4,20 +4,16 @@
     <div class="row custom">
         <div class="col-md-12">
             <h1 class="text-success display-4 text-center">Search</h1>
-            <p class="text-muted text-center mb-2">Enter animal, name or gender</p>        
+            <p class="text-muted text-center mb-2">Enter animal, name or gender</p>
             <form class="m-5 ml-10">
                 <div class="input-group mb-3">
-                    <input type="search" 
-                    class="form-control" 
-                    placeholder="Find your new best friend..."
-                    name="q"
-                    >
+                    <input type="search" class="form-control" placeholder="Find your new best friend..." name="q">
                     <div class="input-group-prepend">
                         <button type="submit" class="btn btn-success"><i class="fas fa-search"></i></button>
                     </div>
-                    
+
                 </div>
-                
+
             </form>
         </div>
     </div>
@@ -32,7 +28,7 @@
                     <div class="swiper-slide">
                         <a href="../animal/{{ animal.id }}">
                             <div class="card">
-                                <img src="{{ animal.photo }}" class="card-img-top" alt="..."
+                                <img src="{{ animal.image.url }}" class="card-img-top" alt="..."
                                     style="height: 20rem; object-fit: cover;">
                                 <div class="card-body bg-success">
                                     <h5 class="card-title text-light text-center">
@@ -50,10 +46,10 @@
                 </div>
                 <!-- If we need pagination -->
                 <!-- <div class="swiper-pagination"></div> -->
-            
+
                 <!-- Swiper JS -->
                 <!-- <script src="../package/swiper-bundle.min.js"></script> -->
-            
+
                 <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev text-light"></div>
                 <div class="swiper-button-next text-light"></div>

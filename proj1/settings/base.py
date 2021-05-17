@@ -135,6 +135,18 @@ STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 # MEDIA_URL = '/media/'
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+#for media store in the bucket
+from google.oauth2 import service_account
+GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
+    os.path.join(BASE_DIR, 'credential.json'))
+
+DEFAULT_FILE_STORAGE = 'proj1.gcloud.GoogleCloudMediaFileStorage'
+GS_PROJECT_ID = 'starry-being-313921'
+GS_BUCKET_NAME = 'proj1animals'
+MEDIA_ROOT = "media/"
+UPLOAD_ROOT = 'media/uploads'
+MEDIA_URL = 'https://storage.googleapis.com/{}/'.format(GS_BUCKET_NAME)
+
 # Default primary key field type
 
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
