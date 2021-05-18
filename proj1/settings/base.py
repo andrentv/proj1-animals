@@ -138,7 +138,7 @@ STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 #for media store in the bucket
 from google.oauth2 import service_account
 GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
-    os.path.join(BASE_DIR, 'credential.json'))
+    os.path.join(BASE_DIR, 'google-credentials.json'))
 
 DEFAULT_FILE_STORAGE = 'proj1.gcloud.GoogleCloudMediaFileStorage'
 GS_PROJECT_ID = 'starry-being-313921'
